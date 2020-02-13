@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Lupiego</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+</head>
+<body bgcolor="#F2AD19">
+
+    <nav id="overlay" style="font-family: Montserrat;">
+        <img src="images/close.svg" class="close-btn" id="close-menu">
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">sobre</a>
+            </li>
+            <li>
+                <a href="#">portfólio</a>
+            </li>
+            <li>
+                <a href="#">contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+    <div class="header grid-item-1">
+        <img src="images/menu.svg" class="menu-btn" id="open-menu">
+    </div>
+
+    <div class="section grid-item-2">
+        <a href="#" class="logo"><img src="images/logo.svg" class="logo1" id="open-logo" alt="Lupiego Logo"></a>
+    </div>
+        
+
+    <div class="social grid-item-3">
+        <a href="https://www.behance.net/lupiego" target="_blank" class="behance"><img src="images/behance.svg" class="behance-btn" id="behance-btn" alt="behance logo"></a>
+        <a href="https://www.instagram.com/lupiego" target="_blank" class="instagram"><img src="images/instagram.svg" class="instagram-btn" id="instagram-btn" alt="instagram logo"></a>
+    </div>
+</div>
+
+    <script>
+    
+        var overlay = document.getElementById('overlay');  
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function () {
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            overlay.classList.remove('show-menu');
+        })
+
+    </script>
+
+</body>
+</html>
+
+<!-- TODO: add the links to the #s. E animar a saída do menu. Update the meta keywords>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/about.css">
+    <title>Lupiego - About</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"> 
+</head>
+<body bgcolor="white">
+
+    <nav id="overlay" style="font-family: Montserrat;">
+        <img src="images/close.svg" class="close-btn" id="close-menu">
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">sobre</a>
+            </li>
+            <li>
+                <a href="#">portfólio</a>
+            </li>
+            <li>
+                <a href="#">contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+    <div class="header grid-item-1">
+        <a href="index.html" class="logo2"><img src="images/logo2.svg" class="logo2" id="open-logo" alt="Lupiego Logo"></a>
+        <img src="images/menu2.svg" class="menu-btn" id="open-menu">
+    </div>
+
+    <div class="section grid-item-2">
+        <img src="images/icon_eu.jpg" alt="Lupiego Profile Picture" class="profile">
+    </div>
+        
+
+    <div class="third grid-item-3">
+        <h1>matheus lufiego</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magni dicta quam sint soluta obcaecati, ipsum dolores culpa praesentium cumque similique cupiditate expedita magnam odio! Ducimus tempore veniam sequi voluptatem voluptate, aliquam cum aspernatur deserunt quia nam, cupiditate maiores fuga, eos in voluptates natus unde minus accusantium quaerat quo saepe!</p>
+
+        <div class="topics">
+            
+                <h2>Softwares</h2>
+                <span><img src="images/pencil.svg" class="pencil"></span>
+                <p class="love">Adobe Photoshop</p><br>
+                <span><img src="images/pencil.svg" class="pencil"></span>
+                <p class="love">Adobe Illustrator</p><br>
+                <span><img src="images/pencil.svg" class="pencil"></span>
+                <p class="love">Adobe InDesign</p><br>
+                <span><img src="images/pencil.svg" class="pencil"></span>
+                <p class="love">Adobe Xd</p><br>
+                <span><img src="images/pencil.svg" class="pencil"></span>
+                <p class="love">Procreate</p>
+            
+                <h2>Linguagens</h2>
+                <span><img src="images/code.svg" class="heart"></span>
+                <p class="love">HTML</p><br>
+                <span><img src="images/code.svg" class="heart"></span>
+                <p class="love">CSS</p><br>
+                <span><img src="images/code.svg" class="heart"></span>
+                <p class="love">JavaScript</p><br>
+                <span><img src="images/code.svg" class="heart"></span>
+                <p class="love">--------</p>
+            
+                <h2>Interesses</h2>
+                <span><img src="images/heart.svg" class="heart"></span>
+                <p class="love">Filmes de terror</p><br>
+                <span><img src="images/heart.svg" class="heart"></span>
+                <p class="love">Moda vitoriana</p><br>
+                <span><img src="images/heart.svg" class="heart"></span>
+                <p class="love">Animais urbanos</p><br>
+                <span><img src="images/heart.svg" class="heart"></span>
+                <p class="love">Musicais</p>
+            
+        </div>
+    </div>
+
+    <div class="soft grid-item-4">
+        <h2>Softwares</h2>
+        <span><img src="images/pencil.svg" class="pencil"></span>
+        <p class="love">Adobe Photoshop</p><br>
+        <span><img src="images/pencil.svg" class="pencil"></span>
+        <p class="love">Adobe Illustrator</p><br>
+        <span><img src="images/pencil.svg" class="pencil"></span>
+        <p class="love">Adobe InDesign</p><br>
+        <span><img src="images/pencil.svg" class="pencil"></span>
+        <p class="love">Adobe Xd</p><br>
+        <span><img src="images/pencil.svg" class="pencil"></span>
+        <p class="love">Procreate</p>
+    </div>
+
+    <div class="ling grid-item-5">
+        <h2>Linguagens</h2>
+        <span><img src="images/code.svg" class="heart"></span>
+        <p class="love">HTML</p><br>
+        <span><img src="images/code.svg" class="heart"></span>
+        <p class="love">CSS</p><br>
+        <span><img src="images/code.svg" class="heart"></span>
+        <p class="love">JavaScript</p><br>
+        <span><img src="images/code.svg" class="heart"></span>
+        <p class="love">--------</p>
+    </div>
+
+    <div class="inter grid-item-6">
+        <h2>Interesses</h2>
+        <span><img src="images/heart.svg" class="heart"></span>
+        <p class="love">Filmes de terror</p><br>
+        <span><img src="images/heart.svg" class="heart"></span>
+        <p class="love">Moda vitoriana</p><br>
+        <span><img src="images/heart.svg" class="heart"></span>
+        <p class="love">Animais urbanos</p><br>
+        <span><img src="images/heart.svg" class="heart"></span>
+        <p class="love">Musicais</p>
+    </div>
+
+
+    <script>
+    
+        var overlay = document.getElementById('overlay');  
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function () {
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            overlay.classList.remove('show-menu');
+        })
+
+    </script>
+
+</body>
+</html>
+
