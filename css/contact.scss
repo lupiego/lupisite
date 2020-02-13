@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+
+    .grid-container {
+        display: grid;
+        grid-row-gap: none;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header"
+        "section"
+        "third";
+        align-content: stretch;
+    }
+
+    .grid-item-1 {
+        grid-area: header;
+        justify-content: right;
+        margin-top: 0rem;
+    }
+
+    .menu-btn {
+        padding: 2em;
+        width: 2rem;
+        float: right;
+        cursor: pointer;
+
+    }
+
+    .logo2 {
+        width: 9em;
+        padding-top: .45em;
+        padding-left: .5em;
+        float: left;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+    }
+
+    .grid-item-2 {
+        grid-area: section;
+        margin: 0 1.5em 0 1.5em;
+        position: relative;
+    }
+
+    .profile {
+        width: 80%;
+        display: block;
+        margin: 0 auto .2em auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #F2AD19;
+        margin: .3em 0 .2em 0;
+        line-height: 1em;
+    }
+
+    h2 {
+        color: #F2AD19;
+        margin-bottom: .4em;
+    }
+
+    .love {
+        display: inline-block;
+        margin-left: .2em;
+        margin-top: auto;
+        padding-bottom: .9em;
+        line-height: .1em;
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    .love:hover {
+        color: #F2AD19;
+        font-size: bold;
+    }
+
+    .pencil {
+        width: 1em;
+        position: relative;
+        height: 1em;
+        z-index: -1;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .insta {
+        width: 1.1em;
+        position: relative;
+        padding: .1em;
+        height: 1em;
+        z-index: -1;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .logo2:hover {
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+        opacity: 0.8;
+    }
+
+    .grid-item-3 {
+        grid-area: third;
+        margin: 0 1.5em 0 1.5em;
+        position: relative;
+    }
+
+    }
+
+/*
+    .grid-item-3 {
+        grid-area: footer;
+        align-self: baseline;
+        margin-bottom: 0rem;
+        padding-bottom: 2em;;
+    }
+*/
+
+    nav {
+        font-size: bold;
+        position: absolute;
+        background: white;
+        padding: 2em;
+        width: calc(100% - 4em);
+        height: 100%;
+        display: none;
+        opacity: 0;
+
+        .close-btn {
+            width: 1.5rem;
+            float: right;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        ul {
+            margin: 10% auto 0 auto;
+            padding: 0;
+            display: grid;
+            width: 80%;
+            grid-template-rows: repeat(4, 40%);
+            list-style-type: none;
+        }
+
+        a {
+            color: #F2AD19;
+            font-weight: bold;
+            font-size: 3em;
+            cursor: pointer;
+            padding: 2vh;
+            text-decoration: none;
+        }
+        li {
+            opacity: 0;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        
+        .grid-container {
+            display: grid;
+            grid-row-gap: none;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 1em;
+            grid-template-areas:
+            "header"
+            "section third"
+            "soft ling inter";
+            align-content: stretch;
+            
+            .grid-item-1 {
+                grid-area: header;
+                grid-column: 1 / span 2;
+                justify-content: right;
+                margin-top: 0rem;
+            }
+
+            .grid-item-2 {
+                grid-area: section;
+                grid-column: 1;
+                grid-row: 2;
+                margin: 0 0 0 10vw;
+                position: relative;
+                justify-self: center;
+                align-self: center;
+            }
+
+            .profile {
+                width: 80%;
+                display: block;
+                margin: 0 2em .2em auto;
+            }
+
+            .grid-item-3 {
+                grid-area: third;
+                grid-column: 2;
+                grid-row: 2;
+                margin: 0 10vw 0 0;
+                position: relative;
+                justify-self: none;
+                align-self: center;
+            }
+
+            h1 {
+                margin: 0 0 .2em 0;
+            }
+
+            .topics {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) {
+
+            .profile {
+                width: 50%;
+                display: block;
+                margin: 0 2em .2em auto;
+            }
+
+        }
+
+    }
+
+
+.show-menu {
+    display: block;
+    z-index: 3;
+    animation: slide-menu 1s ease-in forwards;
+    /*
+    animation: mmfadeOut 1s ease-in forwards;
+    */
+
+    .close-btn {
+        animation: show-x 1s 1s forwards;
+    }
+
+    li:nth-of-type(1) {
+        animation: menu-item-anim .8s forwards 1s ease-in-out
+    }
+    li:nth-of-type(2) {
+        animation: menu-item-anim .8s forwards 1.2s ease-in-out
+    }
+    li:nth-of-type(3) {
+        animation: menu-item-anim .8s forwards 1.4s ease-in-out
+    }
+    li:nth-of-type(4) {
+        animation: menu-item-anim .8s forwards 1.6s ease-in-out
+    }
+}
+
+@keyframes slide-menu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-item-anim {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+*/
+
