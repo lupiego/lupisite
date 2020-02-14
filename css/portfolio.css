@@ -9,8 +9,8 @@ body .grid-container {
   display: -ms-grid;
   display: grid;
   grid-row-gap: none;
-  -ms-grid-rows: 1fr 5fr 5fr 5fr;
-      grid-template-rows: 1fr 5fr 5fr 5fr;
+  -ms-grid-rows: 5em 5fr 5fr 5fr;
+      grid-template-rows: 5em 5fr 5fr 5fr;
       grid-template-areas: "header" "draw" "uiux" "edito";
   -ms-flex-line-pack: stretch;
       align-content: stretch;
@@ -48,10 +48,18 @@ body .title {
   font-size: 3rem;
   font-weight: bold;
   color: white;
-  margin: 0;
   z-index: 3;
   position: relative;
   text-align: center;
+  top: 35%;
+  -webkit-transform: translateY(-65%);
+          transform: translateY(-65%);
+}
+
+body .title:hover {
+  font-size: 3.2em;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 body .link {
@@ -203,13 +211,18 @@ nav li {
     display: -ms-grid;
     display: grid;
     grid-row-gap: none;
-    -ms-grid-rows: 1fr 16fr;
-        grid-template-rows: 1fr 16fr;
+    -ms-grid-rows: 5em 15fr;
+        grid-template-rows: 5em 15fr;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     -ms-flex-line-pack: stretch;
         align-content: stretch;
     height: 100vh;
+  }
+  .grid-container .title {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .grid-container .grid-item-1 {
     -ms-grid-row: 1;

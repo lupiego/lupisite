@@ -8,7 +8,7 @@ body {
     .grid-container {
         display: grid;
         grid-row-gap: none;
-        grid-template-rows: 1fr 5fr 5fr 5fr;
+        grid-template-rows: 5em 5fr 5fr 5fr;
         grid-template-areas:
         "header"
         "draw"
@@ -49,12 +49,16 @@ body {
         font-size: 3rem;
         font-weight: bold;
         color: white;
-        margin: 0;
         z-index: 3;
         position: relative;
         text-align: center;
-        
-        
+        top: 35%;
+        transform: translateY(-65%);
+    }
+
+    .title:hover {
+        font-size: 3.2em;
+        transition: .3s;
     }
 
     .link {
@@ -198,11 +202,15 @@ body {
     .grid-container {
         display: grid;
         grid-row-gap: none;
-        grid-template-rows: 1fr 16fr;
+        grid-template-rows: 5em 15fr;
         grid-template-columns: 1fr 1fr 1fr;
         align-content: stretch;
         height: 100vh;
         
+        .title {
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
         .grid-item-1 {
             grid-row: 1;
