@@ -8,12 +8,15 @@ body {
     .grid-container {
         display: grid;
         grid-row-gap: none;
-        grid-template-rows: auto;
+        grid-template-rows: 1fr 5fr 5fr 5fr;
+        
         grid-template-areas:
         "header"
-        "section"
-        "third";
+        "draw"
+        "uiux"
+        "editorial";
         align-content: stretch;
+        height: 100vh;
     }
 
     .grid-item-1 {
@@ -44,119 +47,30 @@ body {
     }
 
     .grid-item-2 {
-        grid-area: section;
-        margin: 0 1.5em 0 1.5em;
-        position: relative;
+        grid-area: draw;
+
+
     }
 
-    .profile {
-        width: 80%;
-        display: block;
-        margin: 0 auto .2em auto;
-        padding: 10px 10px 3px 3px;
-        border-radius: 50%;
-        border: solid;
-        border-width: 3px;
-        border-color: #F2AD19;
-    }
+
 
     h1 {
         font-size: 3rem;
-        color: #F2AD19;
-        margin: .3em 0 -.15em 0;
+        color: white;
+        margin: .3em 0 .2em 0;
         line-height: 1em;
     }
 
-    h2 {
-        color: #F2AD19;
-        margin-bottom: .4em;
-    }
-
-    .love {
-        display: inline-block;
-        margin-left: .2em;
-        margin-top: auto;
-        line-height: .1em;
-    }
-
-    .heart {
-        width: 1em;
-        position: relative;
-        height: 1em;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-    }
-
-    .pencil {
-        width: 1em;
-        position: relative;
-        height: 1em;
-        z-index: -1;
-        padding: 0;
-        margin: 0;
-    }
-
-    .logo2:hover {
-        -webkit-transition: opacity 1s ease-in-out;
-        -moz-transition: opacity 1s ease-in-out;
-        -ms-transition: opacity 1s ease-in-out;
-        -o-transition: opacity 1s ease-in-out;
-        transition: opacity 1s ease-in-out;
-        opacity: 0.8;
-    }
-
     .grid-item-3 {
-        grid-area: third;
-        margin: 0 1.5em 1em 1.5em;
-        position: relative;
+        grid-area: uiux;
     }
 
     .grid-item-4 {
-        display: none;
-        grid-area: soft;
-        grid-column: 0;
-        grid-row: 0;
-        float: right;
-        margin: 0 10vw 0 0;
-        position: relative;
-        justify-self: left;
-        align-self: center;
-    }
-
-    .grid-item-5 {
-        display: none;
-        grid-area: ling;
-        grid-column: 0;
-        grid-row: 0;
-        float: right;
-        margin: 0 10vw 0 0;
-        position: relative;
-        justify-self: left;
-        align-self: center;
-    }
-
-    .grid-item-6 {
-        display: none;
-        grid-area: inter;
-        grid-column: 0;
-        grid-row: 0;
-        margin: 0 10vw 0 0;
-        position: relative;
-        justify-self: left;
-        align-self: center;
-    }
+        grid-area: editorial;
 
     }
 
-/*
-    .grid-item-3 {
-        grid-area: footer;
-        align-self: baseline;
-        margin-bottom: 0rem;
-        padding-bottom: 2em;;
     }
-*/
 
     nav {
         font-size: bold;
@@ -232,62 +146,20 @@ body {
                 width: 80%;
                 display: block;
                 margin: 0 2em .2em auto;
-                padding: 10px 10px 3px 3px;
-                border-radius: 50%;
-                border: solid;
-                border-width: 3px;
-                border-color: #F2AD19;
-                align-self: center;
             }
 
             .grid-item-3 {
                 grid-area: third;
                 grid-column: 2;
-                grid-row: 2 / span 3;
-                float: right;
+                grid-row: 2;
                 margin: 0 10vw 0 0;
                 position: relative;
-                justify-self: center;
+                justify-self: none;
                 align-self: center;
             }
 
-            .grid-item-4 {
-                grid-area: soft;
-                grid-column: 2;
-                grid-row: 3;
-                float: right;
-                margin: -1em 10vw 0 0;
-                position: relative;
-                justify-self: left;
-                
-                display: none;
-            }
-
-            .grid-item-5 {
-                grid-area: ling;
-                grid-column: 2;
-                grid-row: 4;
-                float: right;
-                margin: -.8em 10vw 0 0;
-                position: relative;
-                justify-self: left;
-                
-                display: none;
-            }
-
-            .grid-item-6 {
-                grid-area: inter;
-                grid-column: 2;
-                grid-row: 5;
-                margin: -.8em 10vw 0 0;
-                position: relative;
-                justify-self: left;
-                
-                display: none;
-            }
-
             h1 {
-                margin: 0 0 -.15em 0;
+                margin: 0 0 .2em 0;
             }
 
             .topics {
@@ -301,11 +173,6 @@ body {
                 width: 50%;
                 display: block;
                 margin: 0 2em .2em auto;
-                padding: 10px 10px 3px 3px;
-                border-radius: 50%;
-                border: solid;
-                border-width: 3px;
-                border-color: #F2AD19;
             }
 
         }

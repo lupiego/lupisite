@@ -9,16 +9,20 @@ body .grid-container {
   display: -ms-grid;
   display: grid;
   grid-row-gap: none;
-  -ms-grid-rows: 0 calc(100vh - 4rem) 0;
-      grid-template-rows: 0 calc(100vh - 4rem) 0;
-      grid-template-areas: "header" "section" "social";
+  -ms-grid-rows: 1fr 15fr 1fr;
+      grid-template-rows: 1fr 15fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "header header header" "section section section" "social social social";
   -ms-flex-line-pack: stretch;
       align-content: stretch;
+  height: 100vh;
 }
 
 body .grid-item-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: header;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
@@ -36,6 +40,7 @@ body .menu-btn {
 body .grid-item-2 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: section;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -60,6 +65,7 @@ body .logo1:hover {
 body .grid-item-3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: social;
   -ms-grid-column-align: center;
       justify-self: center;

@@ -8,12 +8,14 @@ body {
     .grid-container {
         display: grid;
         grid-row-gap: none;
-        grid-template-rows: 0 calc(100vh - 4rem) 0;
+        grid-template-rows: 1fr 15fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        "header"
-        "section"
-        "social";
+        "header header header"
+        "section section section"
+        "social social social";
         align-content: stretch;
+        height: 100vh;
     }
 
     .grid-item-1 {
