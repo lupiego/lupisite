@@ -11,7 +11,7 @@ body .grid-container {
   grid-row-gap: none;
   -ms-grid-rows: 1fr 5fr 5fr 5fr;
       grid-template-rows: 1fr 5fr 5fr 5fr;
-      grid-template-areas: "header" "draw" "uiux" "editorial";
+      grid-template-areas: "header" "draw" "uiux" "edito";
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   height: 100vh;
@@ -51,7 +51,12 @@ body .title {
   margin: 0;
   z-index: 3;
   position: relative;
+  text-align: center;
+}
+
+body .link {
   text-decoration: none;
+  color: white;
 }
 
 body .grid-item-2 {
@@ -61,6 +66,8 @@ body .grid-item-2 {
   margin: 0;
   background: url(imgcss/ilustra.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   overflow: hidden;
   height: auto;
@@ -90,6 +97,8 @@ body .grid-item-3 {
   margin: 0;
   background: url(imgcss/ilustra.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   overflow: hidden;
   height: auto;
@@ -115,10 +124,15 @@ body .overlay2:hover {
 body .grid-item-4 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: editorial;
+  grid-area: edito;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
   margin: 0;
   background: url(imgcss/editorial.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   overflow: hidden;
   height: auto;
@@ -184,7 +198,7 @@ nav li {
   opacity: 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .grid-container {
     display: -ms-grid;
     display: grid;
@@ -193,10 +207,40 @@ nav li {
         grid-template-rows: 1fr 16fr;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "draw uiux editorial";
     -ms-flex-line-pack: stretch;
         align-content: stretch;
     height: 100vh;
+  }
+  .grid-container .grid-item-1 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+  }
+  .grid-container .grid-item-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2 / 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .grid-container .grid-item-3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2 / 5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  .grid-container .grid-item-4 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2 / 5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
   }
 }
 

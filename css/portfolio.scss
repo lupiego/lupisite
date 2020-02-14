@@ -9,12 +9,11 @@ body {
         display: grid;
         grid-row-gap: none;
         grid-template-rows: 1fr 5fr 5fr 5fr;
-
         grid-template-areas:
         "header"
         "draw"
         "uiux"
-        "editorial";
+        "edito";
         align-content: stretch;
         height: 100vh;
     }
@@ -52,9 +51,15 @@ body {
         color: white;
         margin: 0;
         z-index: 3;
-        
         position: relative;
+        text-align: center;
+        
+        
+    }
+
+    .link {
         text-decoration: none;
+        color: white;
     }
 
     .grid-item-2 {
@@ -62,6 +67,8 @@ body {
         margin: 0;
         background: url(imgcss/ilustra.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         position: relative;
         overflow: hidden;
         height: auto;
@@ -89,6 +96,8 @@ body {
         margin: 0;
         background: url(imgcss/ilustra.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         position: relative;
         overflow: hidden;
         height: auto;
@@ -111,10 +120,13 @@ body {
     }
 
     .grid-item-4 {
-        grid-area: editorial;
+        grid-area: edito;
+        grid-row: 4 / 5;
         margin: 0;
         background: url(imgcss/editorial.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         position: relative;
         overflow: hidden;
         height: auto;
@@ -181,21 +193,43 @@ body {
         }
     }
 
-    @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
         
-        .grid-container {
-            display: grid;
-            grid-row-gap: none;
-            grid-template-rows: 1fr 16fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-            "header header header"
-            "draw uiux editorial";
-            align-content: stretch;
-            height: 100vh;
+    .grid-container {
+        display: grid;
+        grid-row-gap: none;
+        grid-template-rows: 1fr 16fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: stretch;
+        height: 100vh;
+        
+
+        .grid-item-1 {
+            grid-row: 1;
+            grid-column: 1 / 4;
         }
 
+        .grid-item-2 {
+            grid-row: 2 / 5;
+            grid-column: 1 / 2;
+
+        }
+
+        .grid-item-3 {
+            grid-row: 2 / 5;
+            grid-column: 2 / 3;
+
+        }
+
+        .grid-item-4 {
+            grid-row: 2 / 5;
+            grid-column: 3 / 4;
+
+        }
+    
     }
+
+}
 
 
 .show-menu {
