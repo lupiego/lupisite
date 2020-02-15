@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/editorial.css">
+    <title>Lupiego - Editorial</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"> 
+</head>
+<body bgcolor="white">
+
+    <nav id="overlay" style="font-family: Montserrat;">
+        <img src="images/close.svg" class="close-btn" id="close-menu">
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">sobre</a>
+            </li>
+            <li>
+                <a href="portfolio.html">portfólio</a>
+            </li>
+            <li>
+                <a href="contact.html">contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+    <div class="header grid-item-1">
+        <a href="index.html" class="logo2"><img src="images/logo2.svg" class="logo2" id="open-logo" alt="Lupiego Logo"></a>
+        <img src="images/menu2.svg" class="menu-btn" id="open-menu">
+    </div>
+
+    <div class="titulo grid-item-2">
+        <h1>editorial</h1>
+    </div>
+    
+    <div class="fairytale grid-item-3">
+        <a href="https://www.behance.net/gallery/91917551/Fairy-Tales-from-Brazil" target="_blank">
+            <img src="images/fairytales.jpg" class="fairy" alt="Fairy Tales from Brazil Cover Picture">
+        </a>
+        <h2>Fairy Tales from Brazil</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dicta!</p>
+        <p>Clique abaixo para ver a apresentação completa:</p>
+
+        <a href="https://www.behance.net/gallery/91917551/Fairy-Tales-from-Brazil" target="_blank">
+        <span class="behance">
+            <p  class="beBtn">Behance</p>
+        </span>
+        </a>
+    </div>
+        
+
+    <div class="flow grid-item-4">
+        <a href="https://www.behance.net/gallery/67238881/Flow" target="_blank">
+            <img src="images/flow.jpg" class="flowonda" alt="Flow Magazine Cover Picture">
+        </a>
+        <h2>Flow Magazine</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dicta!</p>
+        <p>Clique abaixo para ver a apresentação completa:</p>
+
+        <a href="https://www.behance.net/gallery/67238881/Flow" target="_blank">
+        <span class="behance">
+            <p  class="beBtn">Behance</p>
+        </span>
+        </a>
+    </div>
+
+
+    <script>
+
+        var overlay = document.getElementById('overlay');  
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function () {
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            overlay.classList.remove('show-menu');
+        })
+
+    </script>
+
+</body>
+</html>
+
