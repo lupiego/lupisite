@@ -148,16 +148,6 @@ body .grid-item-2 .grid-item-3 {
   width: auto;
 }
 
-body .grid-item-2 .grid-item-4 {
-  grid-area: edito;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4 / 5;
-  margin: 0;
-  height: auto;
-  width: auto;
-}
-
 body nav {
   font-size: bold;
   position: absolute;
