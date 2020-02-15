@@ -8,7 +8,7 @@ body {
     .grid-container {
         display: grid;
         grid-row-gap: none;
-        grid-template-rows: 5em 5fr 5fr 5fr;
+        grid-template-rows: 5em auto;
         grid-template-areas:
         "header"
         "draw"
@@ -69,94 +69,23 @@ body {
     .grid-item-2 {
         grid-area: draw;
         margin: 0;
-        background: url(imgcss/ilustra.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
         height: auto;
         width: auto;
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($color: #F2AD19, $alpha: .6);
-        z-index: 1;
-        cursor: pointer;
-    }
-
-    .overlay:hover {
-        background: rgba($color: #F2AD19, $alpha: .9);
-        transition: .3s;
-    }
-
-    }
 
     .grid-item-3 {
         grid-area: uiux;
         margin: 0;
-        background: url(imgcss/ilustra.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
         height: auto;
         width: auto;
-    }
-
-    .overlay2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($color: #F2AD19, $alpha: .6);
-        z-index: 1;
-        cursor: pointer;
-    }
-
-    .overlay2:hover {
-        background: rgba($color: #F2AD19, $alpha: .9);
-        transition: .3s;
     }
 
     .grid-item-4 {
         grid-area: edito;
         grid-row: 4 / 5;
         margin: 0;
-        background: url(imgcss/editorial.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
         height: auto;
         width: auto;
     }
-
-    .overlay3 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($color: #F2AD19, $alpha: .6);
-        z-index: 1;
-        cursor: pointer;
-    }
-
-    .overlay3:hover {
-        background: rgba($color: #F2AD19, $alpha: .9);
-        transition: .3s;
-    }
-
-
-
 
     }
 
@@ -235,7 +164,6 @@ body {
         .grid-item-4 {
             grid-row: 2 / 5;
             grid-column: 3 / 4;
-
         }
     
     }
@@ -307,4 +235,4 @@ body {
     }
 }
 */
-
+}
