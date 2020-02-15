@@ -34,7 +34,57 @@ body .grid-item-1 {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  margin-top: 0rem;
+  margin-top: 0em;
+}
+
+body .fairy {
+  width: 60%;
+  display: block;
+  margin: 0 auto 0 auto;
+  padding: 10px 10px 3px 3px;
+  border-radius: 50%;
+  border: solid;
+  border-width: 3px;
+  border-color: #F2AD19;
+}
+
+body h2 {
+  color: #F2AD19;
+  padding: 0;
+  margin: .8em 0 -.4em 0;
+  text-align: center;
+}
+
+body p {
+  text-align: center;
+}
+
+body .behance {
+  display: block;
+  width: 9em;
+  height: 2.3em;
+  background-color: #f2ad19;
+  border-radius: 15px;
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+body .beBtn {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+}
+
+body .behance:hover {
+  background-color: #1769ff;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 body .menu-btn {
