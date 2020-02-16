@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/uiux.css">
+    <title>Lupiego - Ilustração</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"> 
+</head>
+<body bgcolor="white">
+
+    <nav id="overlay" style="font-family: Montserrat;">
+        <img src="images/close.svg" class="close-btn" id="close-menu">
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">sobre</a>
+            </li>
+            <li>
+                <a href="portfolio.html">portfólio</a>
+            </li>
+            <li>
+                <a href="contact.html">contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+    <div class="header grid-item-1">
+        <a href="index.html" class="logo2"><img src="images/logo2.svg" class="logo2" id="open-logo" alt="Lupiego Logo"></a>
+        <img src="images/menu2.svg" class="menu-btn" id="open-menu">
+    </div>
+    
+    <div class="instag grid-item-2">
+        <h1>UI/UXs</h1>
+        <p>Eita! Essa página está em manutenção.</p>
+        <a href="portfolio.html" target="_self">
+            <span class="instagram">
+                <p  class="instaBtn">voltar</p>
+            </span>
+        </a>
+    </div>
+
+
+
+    <script>
+        var overlay = document.getElementById('overlay');  
+        var closeMenu = document.getElementById('close-menu');
+
+        document.getElementById('open-menu').addEventListener('click', function () {
+            overlay.classList.add('show-menu');
+        })
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            overlay.classList.remove('show-menu');
+        })
+
+    </script>
+
+</body>
+</html>
+

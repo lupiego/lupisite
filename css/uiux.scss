@@ -71,7 +71,7 @@ body {
         display: block;
         width: 9em;
         height: 2.6em;
-        background-color: #f2ad19;
+        background-color: grey;
         border-radius: 20px;
         position: relative;
         cursor: pointer;
@@ -90,7 +90,7 @@ body {
     }
 
     .instagram:hover {
-        background-color: #833ab4;
+        background-color: #f2ad19;
         transition: .25s;
     }
 
@@ -104,89 +104,6 @@ body {
         height: auto;
         width: auto;
         
-
-    .grid-item-3 {
-        grid-area: 2019;
-        margin: auto 1.5em 1em 1.5em;
-        height: auto;
-        width: auto;
-    }
-
-    .grid-item-4 {
-        grid-area: 2018;
-        margin: auto 1.5em 1em 1.5em;
-        height: auto;
-        width: auto;
-    }
-
-    .grid-item-5 {
-        grid-area: 2017;
-        margin: auto 1.5em 1em 1.5em;
-        height: auto;
-        width: auto;
-    }
-
-    .grid-item-6 {
-        grid-area: 2016;
-        margin: auto 1.5em 1em 1.5em;
-        height: auto;
-        width: auto;
-    }
-
-    .grid-item-7 {
-        grid-area: port;
-        display: grid;
-        grid-auto-columns: 1fr 1fr;
-        grid-column-gap: 1.5px;
-        margin: auto;
-        grid-template-areas: "port1 port2";
-        align-self: baseline;
-    }
-
-    .port1 {
-        display: block;
-        width: 9em;
-        height: 2.6em;
-        background-color: grey;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        cursor: pointer;
-        text-align: center;
-        line-height: 40px;
-        text-decoration: none;
-        margin: 0;
-    }
-
-    .port2 {
-        display: block;
-        width: 9em;
-        height: 2.6em;
-        background-color: grey;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        cursor: pointer;
-        text-align: center;
-        line-height: 40px;
-        text-decoration: none;
-        margin: 0;
-    }
-
-    .port1:hover {
-        background-color: #F2AD19;
-        transition: .25s;
-    }
-
-    .port2:hover {
-        background-color: #F2AD19;
-        transition: .25s;
-    }
-
-    .beBtn {
-        font-weight: bold;
-        font-size: 1.3em;
-        color: white;
-        cursor: pointer;       
-    }
 
 }
 
@@ -290,14 +207,4 @@ body {
         opacity: 1;
     }
 }
-/*
-@keyframes mmfadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-*/
 }

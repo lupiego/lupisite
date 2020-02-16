@@ -3,16 +3,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat';
-  /*
-@keyframes mmfadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-*/
 }
 
 body .grid-container {
@@ -77,7 +67,7 @@ body .instagram {
   display: block;
   width: 9em;
   height: 2.6em;
-  background-color: #f2ad19;
+  background-color: grey;
   border-radius: 20px;
   position: relative;
   cursor: pointer;
@@ -97,7 +87,7 @@ body .instaBtn {
 }
 
 body .instagram:hover {
-  background-color: #833ab4;
+  background-color: #f2ad19;
   -webkit-transition: .25s;
   transition: .25s;
 }
@@ -113,102 +103,6 @@ body .grid-item-2 {
   margin: auto 1.5em 1em 1.5em;
   height: auto;
   width: auto;
-}
-
-body .grid-item-2 .grid-item-3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: 2019;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-4 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: 2018;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-5 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: 2017;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-6 {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  grid-area: 2016;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-7 {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  grid-area: port;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-columns: 1fr 1fr;
-  grid-column-gap: 1.5px;
-  margin: auto;
-      grid-template-areas: "port1 port2";
-  align-self: baseline;
-}
-
-body .grid-item-2 .port1 {
-  display: block;
-  width: 9em;
-  height: 2.6em;
-  background-color: grey;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  cursor: pointer;
-  text-align: center;
-  line-height: 40px;
-  text-decoration: none;
-  margin: 0;
-}
-
-body .grid-item-2 .port2 {
-  display: block;
-  width: 9em;
-  height: 2.6em;
-  background-color: grey;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  cursor: pointer;
-  text-align: center;
-  line-height: 40px;
-  text-decoration: none;
-  margin: 0;
-}
-
-body .grid-item-2 .port1:hover {
-  background-color: #F2AD19;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-body .grid-item-2 .port2:hover {
-  background-color: #F2AD19;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-body .grid-item-2 .beBtn {
-  font-weight: bold;
-  font-size: 1.3em;
-  color: white;
-  cursor: pointer;
 }
 
 body nav {
@@ -350,4 +244,4 @@ body .show-menu li:nth-of-type(4) {
     opacity: 1;
   }
 }
-/*# sourceMappingURL=ilustra.css.map */
+/*# sourceMappingURL=uiux.css.map */
