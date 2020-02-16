@@ -9,9 +9,9 @@ body .grid-container {
   display: -ms-grid;
   display: grid;
   grid-row-gap: none;
-  -ms-grid-rows: 5em 8em auto;
-      grid-template-rows: 5em 8em auto;
-      grid-template-areas: "header" "titulo" "fairytale" "flow";
+  -ms-grid-rows: 5em 8em (auto)[2] 8.5em;
+      grid-template-rows: 5em 8em repeat(2, auto) 8.5em;
+      grid-template-areas: "header" "titulo" "fairytale" "flow" "port";
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   height: 100vh;
@@ -170,6 +170,54 @@ body .grid-item-4 {
   width: auto;
 }
 
+body .grid-item-5 {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  margin: auto;
+      grid-template-areas: "port1 port2";
+}
+
+body .port1 {
+  display: block;
+  width: 9em;
+  height: 2.6em;
+  background-color: grey;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  margin: auto 1px auto auto;
+}
+
+body .port2 {
+  display: block;
+  width: 9em;
+  height: 2.6em;
+  background-color: grey;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  margin: auto;
+}
+
+body .port1:hover {
+  background-color: #F2AD19;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+body .port2:hover {
+  background-color: #F2AD19;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
 nav {
   font-size: bold;
   position: absolute;
@@ -219,14 +267,14 @@ nav li {
     display: grid;
     grid-row-gap: none;
     grid-column-gap: 1em;
-    -ms-grid-rows: 5em 8em auto;
-        grid-template-rows: 5em 8em auto;
+    -ms-grid-rows: 5em 8em 1fr 8em;
+        grid-template-rows: 5em 8em 1fr 8em;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "fairytale flow";
+        grid-template-areas: "header header" "fairytale flow" "port port";
     -ms-flex-line-pack: stretch;
         align-content: stretch;
-    height: 100%;
+    height: 100vh;
   }
   .grid-container .grid-item-1 {
     -ms-grid-row: 1;
@@ -254,14 +302,15 @@ nav li {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 1em 0 5em;
     margin: auto 0;
-    height: calc(100% - 13em);
+    height: 1fr;
   }
   .grid-container .grid-item-4 {
     -ms-grid-row: 3;
@@ -270,14 +319,33 @@ nav li {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 5em 0 1em;
     margin: auto 0;
-    height: calc(100% - 13em);
+    height: 1fr;
+  }
+  .grid-container .grid-item-5 {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .grid-container .port1 {
+    margin: auto 1px auto auto;
+  }
+  .grid-container .port2 {
+    margin: auto auto auto auto;
   }
 }
 
