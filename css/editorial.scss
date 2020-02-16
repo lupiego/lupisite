@@ -167,6 +167,7 @@ body {
         grid-auto-columns: 1fr 1fr;
         margin: auto;
         grid-template-areas: "port1 port2";
+        align-self: baseline;
     }
 
     .port1 {

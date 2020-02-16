@@ -24,13 +24,6 @@ body {
         margin-top: 0rem;
     }
 
-    .menu-btn {
-        padding: 2em;
-        width: 2rem;
-        float: right;
-        cursor: pointer;
-
-    }
 
     .grid-item-2 {
         grid-area: section;
@@ -60,122 +53,83 @@ body {
     .grid-item-3 {
         grid-area: social;
         justify-self: center;
+        display: grid;
+        grid-column-gap: 1.5px;
+        grid-auto-columns: 1fr 1fr 1fr;
+        margin: auto auto 1.5em auto;
+        grid-template-areas: "port1 port2 port3";
         align-self: baseline;
-        margin-bottom: 0rem;
-        padding-bottom: 2em;;
     }
 
-    .behance-btn {
-        width: 2em;
+    a {
+        text-decoration: none;
+    }
+
+    .port1 {
+        display: block;
+        width: 7em;
+        height: 2.6em;
+        background-color: white;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .port2 {
+        display: block;
+        width: 7em;
+        height: 2.6em;
+        background-color: white;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .port1:hover {
+        background-color: grey;
+        transition: .25s;
+    }
+
+    .port2:hover {
+        background-color: grey;
+        transition: .25s;
+    }
+
+    .port3 {
+        display: block;
+        width: 7em;
+        height: 2.6em;
+        background-color: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .port3:hover {
+        background-color: grey;
+        transition: .25s;
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 1em;
+        color: #F2AD19;
         cursor: pointer;
     }
 
-    .instagram-btn {
-        width: 1.5em;
-        cursor: pointer;
-        padding-left: .5em;
-    }
-
-    nav {
-        font-size: bold;
-        position: absolute;
-        background: white;
-        padding: 2em;
-        width: calc(100% - 4em);
-        height: calc(100vh - 4em);
-        display: none;
-        opacity: 0;
-
-        .close-btn {
-            width: 1.5rem;
-            float: right;
-            cursor: pointer;
-            opacity: 0;
-        }
-
-        ul {
-            margin: 10% auto 0 auto;
-            padding: 0;
-            display: grid;
-            width: 80%;
-            grid-template-rows: repeat(4, 40%);
-            list-style-type: none;
-        }
-
-        a {
-            color: #F2AD19;
-            font-weight: bold;
-            font-size: 3em;
-            cursor: pointer;
-            padding: 2vh;
-            text-decoration: none;
-        }
-        li {
-            opacity: 0;
-        }
+    p:hover {
+        color: white;
+        transition: .25s;
     }
 
 }
-.show-menu {
-    display: block;
-    animation: slide-menu 1s ease-in forwards;
-    /*
-    animation: mmfadeOut 1s ease-in forwards;
-    */
-
-    .close-btn {
-        animation: show-x 1s 1s forwards;
-    }
-
-    li:nth-of-type(1) {
-        animation: menu-item-anim .8s forwards 1s ease-in-out
-    }
-    li:nth-of-type(2) {
-        animation: menu-item-anim .8s forwards 1.2s ease-in-out
-    }
-    li:nth-of-type(3) {
-        animation: menu-item-anim .8s forwards 1.4s ease-in-out
-    }
-    li:nth-of-type(4) {
-        animation: menu-item-anim .8s forwards 1.6s ease-in-out
-    }
-}
-
-@keyframes slide-menu {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes show-x {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes menu-item-anim {
-    from {
-        transform: translateX(-20%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-/*
-@keyframes mmfadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-*/

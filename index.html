@@ -10,27 +10,9 @@
 </head>
 <body bgcolor="#F2AD19">
 
-    <nav id="overlay" style="font-family: Montserrat;">
-        <img src="images/close.svg" class="close-btn" id="close-menu">
-        <ul>
-            <li>
-                <a href="index.html">home</a>
-            </li>
-            <li>
-                <a href="about.html">sobre</a>
-            </li>
-            <li>
-                <a href="portfolio.html">portfólio</a>
-            </li>
-            <li>
-                <a href="contact.html">contato</a>
-            </li>
-        </ul>
-    </nav>
-
     <div class="grid-container">
     <div class="header grid-item-1">
-        <img src="images/menu.svg" class="menu-btn" id="open-menu">
+        
     </div>
 
     <div class="section grid-item-2">
@@ -40,25 +22,26 @@
         
 
     <div class="social grid-item-3">
-        <a href="https://www.behance.net/lupiego" target="_blank" class="behance"><img src="images/behance.svg" class="behance-btn" id="behance-btn" alt="behance logo"></a>
-        <a href="https://www.instagram.com/lupiego" target="_blank" class="instagram"><img src="images/instagram.svg" class="instagram-btn" id="instagram-btn" alt="instagram logo"></a>
+            <a href="about.html" target="_self">
+                <span class="port1">
+                    <p>sobre</p>
+                </span>
+            </a>
+            <a href="portfolio.html" target="_self">
+                <span class="port2">
+                    <p>portfólio</p>
+                </span>
+            </a>
+            <a href="contact.html" target="_self">
+                <span class="port3">
+                    <p>contato</p>
+                </span>
+            </a>
+        </div>
     </div>
 </div>
 
-    <script>
-    
-        var overlay = document.getElementById('overlay');  
-        var closeMenu = document.getElementById('close-menu');
 
-        document.getElementById('open-menu').addEventListener('click', function () {
-            overlay.classList.add('show-menu');
-        })
-
-        document.getElementById('close-menu').addEventListener('click', function () {
-            overlay.classList.remove('show-menu');
-        })
-
-    </script>
 
 </body>
 </html>
