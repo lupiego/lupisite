@@ -74,6 +74,10 @@ body h2 {
   margin-bottom: .4em;
 }
 
+body b {
+  color: #323232;
+}
+
 body .love {
   display: inline-block;
   margin-left: .2em;

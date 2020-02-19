@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
-
+html {
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
@@ -8,14 +10,15 @@ body {
     .grid-container {
         display: grid;
         grid-row-gap: none;
-        grid-template-rows: 5em auto auto 5em;
+        grid-template-rows: 5em auto auto auto 5em;
         grid-template-areas:
         "header"
         "instag"
         "nove"
+        "instadois"
         "port";
         align-content: stretch;
-        height: 100%;
+        min-height: 100%;
         
     }
 
@@ -66,6 +69,10 @@ body {
         text-decoration: none;
     }
 
+    b {
+        color: grey;
+    }
+
     .instagram {
         display: block;
         width: 9em;
@@ -113,20 +120,25 @@ body {
         justify-self: center;
     }
 
+    .grid-item-4 {
+        grid-area: instadois;
+        margin: auto 1.5em 1em 1.5em;
+        height: auto;
+        width: auto;
+    }
+
     .grid-item-7 {
         grid-area: port;
         display: grid;
         grid-auto-columns: 1fr 1fr;
         grid-column-gap: 1.5px;
-        margin: 0 auto 0 auto;
+        margin: auto auto 0 auto;
+        margin-top: auto;
         padding: 0;
         grid-template-areas: "port1 port2";
-        align-content: baseline;
-        position: absolute;
-        bottom: 1.5em;
-        left: 50%;
-        transform: translateX(-50%);
-
+        position: relative;
+        margin-bottom: 1.5em;
+    }
 
     .port1 {
         display: block;
@@ -171,9 +183,6 @@ body {
         font-size: 1.3em;
         color: white;
         cursor: pointer;       
-    }
-    
-
     }
 }
 
@@ -223,7 +232,7 @@ body {
         min-height: 100%;
         grid-template-rows: auto 2fr 11.5fr auto;
         display: grid;
-        height: 100%;
+        min-height: 100%;
 
         .grid-item-2 {
             padding: 0 10% 0 10%;
@@ -240,11 +249,10 @@ body {
     }
 
         .grid-item-7 {
-            align-self: baseline;
-            position: absolute;
+            
+            position: relative;
             bottom: 1.5em;
-            left: 50%;
-            transform: translateX(-50%);
+            margin-top: auto;
         }
     }
 }
@@ -255,7 +263,7 @@ body {
     min-height: 100%;
     grid-template-rows: auto 2fr 11.5fr auto;
     display: grid;
-    height: 100%;
+    min-height: 100%;
 
     .grid-item-2 {
         padding: 0 10% 0 10%;
@@ -267,11 +275,12 @@ body {
 }
 
     .grid-item-7 {
-        align-self: baseline;
-        position: absolute;
+        position: relative;
+        
         bottom: 1.5em;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 }
@@ -282,7 +291,7 @@ body {
     min-height: 100%;
     grid-template-rows: auto 2fr 11.5fr auto;
     display: grid;
-    height: 100%;
+    min-height: 100%;
 
     .grid-item-2 {
         padding: 0 10em 0 10em;
@@ -294,10 +303,9 @@ body {
 
     .grid-item-7 {
         align-self: baseline;
-        position: absolute;
+        position: relative;
         bottom: 1.5em;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: auto;
     }
 }
 }
