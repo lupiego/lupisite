@@ -48,7 +48,7 @@ body h1 {
   color: #F2AD19;
   font-size: 3rem;
   text-align: center;
-  margin: 0 0 -.1em 0;
+  margin: .5em 0 -.1em 0;
 }
 
 body h2 {
@@ -132,6 +132,11 @@ body .grid-item-7 {
       grid-template-areas: "port1 port2";
   -ms-flex-line-pack: baseline;
       align-content: baseline;
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 body .grid-item-7 .port1 {
@@ -234,10 +239,14 @@ nav li {
     height: 100%;
   }
   .grid-container .grid-item-2 {
-    padding: 0 10em 0 10em;
+    padding: 0 10% 0 10%;
   }
   .grid-container .grid-item-3 {
     width: 600px;
+    margin: auto 0 auto 0;
+  }
+  .grid-container .grid-item-3 .item {
+    height: auto;
   }
   .grid-container .grid-item-7 {
     -ms-flex-item-align: baseline;
@@ -260,10 +269,36 @@ nav li {
     height: 100%;
   }
   .grid-container .grid-item-2 {
+    padding: 0 10% 0 10%;
+  }
+  .grid-container .grid-item-3 {
+    width: 60em;
+  }
+  .grid-container .grid-item-7 {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .grid-container {
+    min-height: 100%;
+    -ms-grid-rows: auto 2fr 11.5fr auto;
+        grid-template-rows: auto 2fr 11.5fr auto;
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+  }
+  .grid-container .grid-item-2 {
     padding: 0 10em 0 10em;
   }
   .grid-container .grid-item-3 {
-    width: 900px;
+    width: 80em;
   }
   .grid-container .grid-item-7 {
     -ms-flex-item-align: baseline;

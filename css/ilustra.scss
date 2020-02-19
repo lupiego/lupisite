@@ -50,7 +50,7 @@ body {
         color: #F2AD19;
         font-size: 3rem;
         text-align: center;
-        margin: 0 0 -.1em 0;
+        margin: .5em 0 -.1em 0;
     }
 
     h2 {
@@ -122,6 +122,10 @@ body {
         padding: 0;
         grid-template-areas: "port1 port2";
         align-content: baseline;
+        position: absolute;
+        bottom: 1.5em;
+        left: 50%;
+        transform: translateX(-50%);
 
 
     .port1 {
@@ -222,11 +226,17 @@ body {
         height: 100%;
 
         .grid-item-2 {
-            padding: 0 10em 0 10em;
+            padding: 0 10% 0 10%;
         }
 
         .grid-item-3 {
         width: 600px;
+        margin: auto 0 auto 0;
+        
+
+        .item {
+            height: auto;
+        }
     }
 
         .grid-item-7 {
@@ -248,12 +258,38 @@ body {
     height: 100%;
 
     .grid-item-2 {
+        padding: 0 10% 0 10%;
+    }
+
+    .grid-item-3 {
+    width: 60em;
+    
+}
+
+    .grid-item-7 {
+        align-self: baseline;
+        position: absolute;
+        bottom: 1.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+}
+
+@media only screen and (min-width: 2000px) {
+        
+    .grid-container {
+    min-height: 100%;
+    grid-template-rows: auto 2fr 11.5fr auto;
+    display: grid;
+    height: 100%;
+
+    .grid-item-2 {
         padding: 0 10em 0 10em;
     }
 
     .grid-item-3 {
-    
-    width: 900px;
+    width: 80em;
 }
 
     .grid-item-7 {
