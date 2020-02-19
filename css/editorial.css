@@ -342,6 +342,13 @@ nav li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .grid-container .port1 {
     margin: auto 1px auto auto;

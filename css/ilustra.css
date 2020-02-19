@@ -3,28 +3,18 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat';
-  /*
-@keyframes mmfadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-*/
 }
 
 body .grid-container {
   display: -ms-grid;
   display: grid;
   grid-row-gap: none;
-  -ms-grid-rows: 5em auto;
-      grid-template-rows: 5em auto;
-      grid-template-areas: "header" "instag" "2019" "2018" "2017" "2016" "port";
+  -ms-grid-rows: 5em auto auto 5em;
+      grid-template-rows: 5em auto auto 5em;
+      grid-template-areas: "header" "instag" "nove" "port";
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  height: auto;
+  height: 100%;
 }
 
 body .grid-item-1 {
@@ -58,6 +48,7 @@ body h1 {
   color: #F2AD19;
   font-size: 3rem;
   text-align: center;
+  margin: 0 0 -.1em 0;
 }
 
 body h2 {
@@ -115,56 +106,35 @@ body .grid-item-2 {
   width: auto;
 }
 
-body .grid-item-2 .grid-item-3 {
+body .grid-item-3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: 2019;
-  margin: auto 1.5em 1em 1.5em;
+  grid-area: nove;
+  margin: 0;
   height: auto;
-  width: auto;
+  width: 320px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-body .grid-item-2 .grid-item-4 {
+body .grid-item-7 {
   -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: 2018;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-5 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: 2017;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-6 {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  grid-area: 2016;
-  margin: auto 1.5em 1em 1.5em;
-  height: auto;
-  width: auto;
-}
-
-body .grid-item-2 .grid-item-7 {
-  -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: port;
   display: -ms-grid;
   display: grid;
   grid-auto-columns: 1fr 1fr;
   grid-column-gap: 1.5px;
-  margin: auto;
+  margin: 0 auto 0 auto;
+  padding: 0;
       grid-template-areas: "port1 port2";
-  align-self: baseline;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
 }
 
-body .grid-item-2 .port1 {
+body .grid-item-7 .port1 {
   display: block;
   width: 9em;
   height: 2.6em;
@@ -178,7 +148,7 @@ body .grid-item-2 .port1 {
   margin: 0;
 }
 
-body .grid-item-2 .port2 {
+body .grid-item-7 .port2 {
   display: block;
   width: 9em;
   height: 2.6em;
@@ -192,26 +162,26 @@ body .grid-item-2 .port2 {
   margin: 0;
 }
 
-body .grid-item-2 .port1:hover {
+body .grid-item-7 .port1:hover {
   background-color: #F2AD19;
   -webkit-transition: .25s;
   transition: .25s;
 }
 
-body .grid-item-2 .port2:hover {
+body .grid-item-7 .port2:hover {
   background-color: #F2AD19;
   -webkit-transition: .25s;
   transition: .25s;
 }
 
-body .grid-item-2 .beBtn {
+body .grid-item-7 .beBtn {
   font-weight: bold;
   font-size: 1.3em;
   color: white;
   cursor: pointer;
 }
 
-body nav {
+nav {
   font-size: bold;
   position: absolute;
   background: white;
@@ -223,14 +193,14 @@ body nav {
   z-index: 5;
 }
 
-body nav .close-btn {
+nav .close-btn {
   width: 1.5rem;
   float: right;
   cursor: pointer;
   opacity: 0;
 }
 
-body nav ul {
+nav ul {
   margin: 10% auto 0 auto;
   padding: 0;
   display: -ms-grid;
@@ -241,7 +211,7 @@ body nav ul {
   list-style-type: none;
 }
 
-body nav a {
+nav a {
   color: #F2AD19;
   font-weight: bold;
   font-size: 3em;
@@ -250,11 +220,63 @@ body nav a {
   text-decoration: none;
 }
 
-body nav li {
+nav li {
   opacity: 0;
 }
 
-body .show-menu {
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    min-height: 100%;
+    -ms-grid-rows: auto 2fr 11.5fr auto;
+        grid-template-rows: auto 2fr 11.5fr auto;
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+  }
+  .grid-container .grid-item-2 {
+    padding: 0 10em 0 10em;
+  }
+  .grid-container .grid-item-3 {
+    width: 600px;
+  }
+  .grid-container .grid-item-7 {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .grid-container {
+    min-height: 100%;
+    -ms-grid-rows: auto 2fr 11.5fr auto;
+        grid-template-rows: auto 2fr 11.5fr auto;
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+  }
+  .grid-container .grid-item-2 {
+    padding: 0 10em 0 10em;
+  }
+  .grid-container .grid-item-3 {
+    width: 900px;
+  }
+  .grid-container .grid-item-7 {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.show-menu {
   display: block;
   z-index: 5;
   -webkit-animation: slide-menu 1s ease-in forwards;
@@ -264,27 +286,27 @@ body .show-menu {
     */
 }
 
-body .show-menu .close-btn {
+.show-menu .close-btn {
   -webkit-animation: show-x 1s 1s forwards;
           animation: show-x 1s 1s forwards;
 }
 
-body .show-menu li:nth-of-type(1) {
+.show-menu li:nth-of-type(1) {
   -webkit-animation: menu-item-anim .8s forwards 1s ease-in-out;
           animation: menu-item-anim .8s forwards 1s ease-in-out;
 }
 
-body .show-menu li:nth-of-type(2) {
+.show-menu li:nth-of-type(2) {
   -webkit-animation: menu-item-anim .8s forwards 1.2s ease-in-out;
           animation: menu-item-anim .8s forwards 1.2s ease-in-out;
 }
 
-body .show-menu li:nth-of-type(3) {
+.show-menu li:nth-of-type(3) {
   -webkit-animation: menu-item-anim .8s forwards 1.4s ease-in-out;
           animation: menu-item-anim .8s forwards 1.4s ease-in-out;
 }
 
-body .show-menu li:nth-of-type(4) {
+.show-menu li:nth-of-type(4) {
   -webkit-animation: menu-item-anim .8s forwards 1.6s ease-in-out;
           animation: menu-item-anim .8s forwards 1.6s ease-in-out;
 }
@@ -350,4 +372,15 @@ body .show-menu li:nth-of-type(4) {
     opacity: 1;
   }
 }
+
+/*
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+*/
 /*# sourceMappingURL=ilustra.css.map */

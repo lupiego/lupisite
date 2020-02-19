@@ -303,6 +303,11 @@ body {
             grid-column: 1 / 3;
             align-content: center;
             justify-content: center;
+            align-self: baseline;
+            position: absolute;
+            bottom: 1.5em;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .port1 {
