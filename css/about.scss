@@ -12,7 +12,8 @@ body {
         grid-template-areas:
         "header"
         "section"
-        "third";
+        "third"
+        "topics";
         align-content: stretch;
     }
 
@@ -76,6 +77,11 @@ body {
         color: #323232;
     }
 
+    strong {
+        color: #F2AD19;
+        font-size: .8rem;
+    }
+
     .love {
         display: inline-block;
         margin-left: .2em;
@@ -117,50 +123,11 @@ body {
     }
 
     .grid-item-4 {
-        display: none;
-        grid-area: soft;
-        grid-column: 0;
-        grid-row: 0;
-        float: right;
-        margin: 0 10vw 0 0;
+        grid-area: topics;
+        margin: 0 1.5em 1em 1.5em;
         position: relative;
-        justify-self: left;
-        align-self: center;
     }
 
-    .grid-item-5 {
-        display: none;
-        grid-area: ling;
-        grid-column: 0;
-        grid-row: 0;
-        float: right;
-        margin: 0 10vw 0 0;
-        position: relative;
-        justify-self: left;
-        align-self: center;
-    }
-
-    .grid-item-6 {
-        display: none;
-        grid-area: inter;
-        grid-column: 0;
-        grid-row: 0;
-        margin: 0 10vw 0 0;
-        position: relative;
-        justify-self: left;
-        align-self: center;
-    }
-
-    }
-
-/*
-    .grid-item-3 {
-        grid-area: footer;
-        align-self: baseline;
-        margin-bottom: 0rem;
-        padding-bottom: 2em;;
-    }
-*/
 
     nav {
         font-size: bold;
@@ -211,8 +178,8 @@ body {
             grid-column-gap: 1em;
             grid-template-areas:
             "header"
-            "section third"
-            "soft ling inter";
+            "section topics"
+            "third topics";
             align-content: stretch;
             
             .grid-item-1 {
@@ -246,48 +213,21 @@ body {
 
             .grid-item-3 {
                 grid-area: third;
-                grid-column: 2;
-                grid-row: 2 / span 3;
                 float: right;
-                margin: 0 10vw 0 0;
+                margin: 1em 0 0 10vw;
                 position: relative;
                 justify-self: center;
                 align-self: center;
             }
 
             .grid-item-4 {
-                grid-area: soft;
+                grid-area: topics;
                 grid-column: 2;
-                grid-row: 3;
+                grid-row: 2 / span 3;
                 float: right;
-                margin: -1em 10vw 0 0;
+                margin: 0 10vw 0;
                 position: relative;
-                justify-self: left;
-                
-                display: none;
-            }
 
-            .grid-item-5 {
-                grid-area: ling;
-                grid-column: 2;
-                grid-row: 4;
-                float: right;
-                margin: -.8em 10vw 0 0;
-                position: relative;
-                justify-self: left;
-                
-                display: none;
-            }
-
-            .grid-item-6 {
-                grid-area: inter;
-                grid-column: 2;
-                grid-row: 5;
-                margin: -.8em 10vw 0 0;
-                position: relative;
-                justify-self: left;
-                
-                display: none;
             }
 
             h1 {
@@ -302,7 +242,22 @@ body {
         @media only screen and (min-width: 1000px) {
 
             .profile {
-                width: 50%;
+                max-width: 30vw;
+                display: block;
+                margin: 0 2em .2em auto;
+                padding: 10px 10px 3px 3px;
+                border-radius: 50%;
+                border: solid;
+                border-width: 3px;
+                border-color: #F2AD19;
+            }
+
+        }
+
+        @media only screen and (min-width: 1620px) {
+
+            .profile {
+                max-width: 20vw;
                 display: block;
                 margin: 0 2em .2em auto;
                 padding: 10px 10px 3px 3px;
@@ -321,9 +276,6 @@ body {
     display: block;
     z-index: 3;
     animation: slide-menu 1s ease-in forwards;
-    /*
-    animation: mmfadeOut 1s ease-in forwards;
-    */
 
     .close-btn {
         animation: show-x 1s 1s forwards;
@@ -381,4 +333,4 @@ body {
     }
 }
 */
-
+}
