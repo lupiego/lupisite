@@ -225,7 +225,7 @@ body {
                 grid-column: 2;
                 grid-row: 2 / span 3;
                 float: right;
-                margin: 0 10vw 0;
+                margin: 0 10vw 0 1.5em;
                 position: relative;
 
             }
@@ -241,6 +241,8 @@ body {
 
         @media only screen and (min-width: 1000px) {
 
+        
+            .grid-container {    
             .profile {
                 max-width: 30vw;
                 display: block;
@@ -251,13 +253,14 @@ body {
                 border-width: 3px;
                 border-color: #F2AD19;
             }
-
+            }
         }
 
         @media only screen and (min-width: 1620px) {
 
+            .grid-container {
             .profile {
-                max-width: 20vw;
+                max-width: 25vw;
                 display: block;
                 margin: 0 2em .2em auto;
                 padding: 10px 10px 3px 3px;
@@ -266,7 +269,7 @@ body {
                 border-width: 3px;
                 border-color: #F2AD19;
             }
-
+            }
         }
 
     }
