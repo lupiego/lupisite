@@ -174,24 +174,24 @@ body {
             display: grid;
             grid-row-gap: none;
             grid-template-rows: auto;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: 1fr .5fr 1fr;
             grid-column-gap: 1em;
             grid-template-areas:
-            "header"
-            "section topics"
-            "third topics";
+            "header header header"
+            "section section topics"
+            "third third topics";
             align-content: stretch;
             
             .grid-item-1 {
                 grid-area: header;
-                grid-column: 1 / span 2;
+                grid-column: 1 / span 3;
                 justify-content: right;
                 margin-top: 0rem;
             }
 
             .grid-item-2 {
                 grid-area: section;
-                grid-column: 1;
+                grid-column: 1 / span 2;
                 grid-row: 2;
                 margin: 0 0 0 10vw;
                 position: relative;
@@ -214,6 +214,8 @@ body {
             .grid-item-3 {
                 grid-area: third;
                 float: right;
+                grid-column: 1 / span 2;
+                grid-row: 3;
                 margin: 1em 0 0 10vw;
                 position: relative;
                 justify-self: center;
@@ -222,7 +224,7 @@ body {
 
             .grid-item-4 {
                 grid-area: topics;
-                grid-column: 2;
+                grid-column: 3;
                 grid-row: 2 / span 3;
                 float: right;
                 margin: 0 10vw 0 1.5em;
@@ -242,7 +244,16 @@ body {
         @media only screen and (min-width: 1000px) {
 
         
-            .grid-container {    
+            .grid-container { 
+                
+            .grid-item-2 {
+                margin: 0 0 0 20vw;
+            }
+            
+            .grid-item-3 {
+                margin: 1em 0 0 20vw;
+            }
+            
             .profile {
                 max-width: 30vw;
                 display: block;
@@ -259,6 +270,15 @@ body {
         @media only screen and (min-width: 1620px) {
 
             .grid-container {
+
+                .grid-item-2 {
+                    margin: 0 0 0 25vw;
+                }
+                
+                .grid-item-3 {
+                    margin: 1em 0 0 25vw;
+                }
+
             .profile {
                 max-width: 25vw;
                 display: block;
