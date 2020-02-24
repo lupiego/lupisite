@@ -265,9 +265,6 @@ nav li {
     position: relative;
     bottom: 1.5em;
     margin-top: auto;
-    top: 95%;
-    -webkit-transform: translateY(-5%);
-            transform: translateY(-5%);
   }
 }
 
