@@ -145,4 +145,9 @@ body p:hover {
   -webkit-transition: .25s;
   transition: .25s;
 }
+
+body #quem {
+  color: white;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

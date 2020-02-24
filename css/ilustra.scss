@@ -132,12 +132,9 @@ body {
         display: grid;
         grid-auto-columns: 1fr 1fr;
         grid-column-gap: 1.5px;
-        margin: auto auto 0 auto;
-        margin-top: auto;
-        padding: 0;
+        margin: auto;
         grid-template-areas: "port1 port2";
-        position: relative;
-        margin-bottom: 1.5em;
+        align-self: baseline;
     }
 
     .port1 {
@@ -246,15 +243,9 @@ body {
         .item {
             height: auto;
         }
-    }
-
-        .grid-item-7 {
-            
-            position: relative;
-            bottom: 1.5em;
-            margin-top: auto;
-            
         }
+
+
     }
 }
 
@@ -272,16 +263,6 @@ body {
 
     .grid-item-3 {
     width: 60em;
-    
-}
-
-    .grid-item-7 {
-        position: relative;
-        
-        bottom: 1.5em;
-        margin-top: auto;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 }
@@ -295,20 +276,29 @@ body {
     min-height: 100%;
 
     .grid-item-2 {
-        padding: 0 10em 0 10em;
+        padding: 0 25vw 0 25vw;
     }
 
     .grid-item-3 {
     width: 80em;
-}
-
-    .grid-item-7 {
-        
-        position: relative;
-        bottom: 1.5em;
-        margin-top: auto;
     }
 }
+}
+
+@media only screen and (min-height: 910px) {
+        
+    .grid-container{
+
+        .grid-item-7 {
+        align-content: center;
+        justify-content: center;
+        align-self: baseline;
+        position: absolute;
+        bottom: 1.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+    }
 }
 
 

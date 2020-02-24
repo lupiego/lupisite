@@ -144,12 +144,9 @@ body .grid-item-7 {
   display: grid;
   grid-auto-columns: 1fr 1fr;
   grid-column-gap: 1.5px;
-  margin: auto auto 0 auto;
-  margin-top: auto;
-  padding: 0;
+  margin: auto;
       grid-template-areas: "port1 port2";
-  position: relative;
-  margin-bottom: 1.5em;
+  align-self: baseline;
 }
 
 body .port1 {
@@ -261,11 +258,6 @@ nav li {
   .grid-container .grid-item-3 .item {
     height: auto;
   }
-  .grid-container .grid-item-7 {
-    position: relative;
-    bottom: 1.5em;
-    margin-top: auto;
-  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -283,13 +275,6 @@ nav li {
   .grid-container .grid-item-3 {
     width: 60em;
   }
-  .grid-container .grid-item-7 {
-    position: relative;
-    bottom: 1.5em;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -302,15 +287,27 @@ nav li {
     min-height: 100%;
   }
   .grid-container .grid-item-2 {
-    padding: 0 10em 0 10em;
+    padding: 0 25vw 0 25vw;
   }
   .grid-container .grid-item-3 {
     width: 80em;
   }
+}
+
+@media only screen and (min-height: 910px) {
   .grid-container .grid-item-7 {
-    position: relative;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    position: absolute;
     bottom: 1.5em;
-    margin-top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
