@@ -66,7 +66,7 @@ body .grid-item-3 {
   display: grid;
   grid-column-gap: 1.5px;
   grid-auto-columns: 1fr 1fr 1fr;
-  margin: auto auto 1.5em auto;
+  margin: auto auto 2.5em auto;
       grid-template-areas: "port1 port2 port3";
   align-self: baseline;
 }
