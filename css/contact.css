@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 body {
-  margin: 0;
+  margin: 0 0 1em 0;
   padding: 0;
   font-family: 'Montserrat';
 }
@@ -72,6 +72,7 @@ body h2 {
 body .love {
   display: inline-block;
   margin-left: .2em;
+  margin-bottom: .1em;
   margin-top: auto;
   padding-bottom: .9em;
   line-height: .1em;
@@ -91,7 +92,7 @@ body .pencil {
   height: 1em;
   z-index: -1;
   padding: 0;
-  margin: 0;
+  margin: 0 0 .1em 0;
   cursor: pointer;
 }
 
